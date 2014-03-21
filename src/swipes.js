@@ -3,10 +3,22 @@ var swipes;
 ("undefined" == typeof swipes) && (swipes = (function () {
   var doc = document;
 
-  console.log("typeof touchstart: %s", typeof doc.ontouchstart);
-  console.log("touchstart: ", doc.ontouchstart);
+  function log(text) {
+    if (!log.on) {return;}
+    var elem = doc.createElement("p");
+    elem.innerHTML = text;
+    doc.body.appendChild(elem);
+  }
+  log.on = true;
+
+  log("typeof touchstart: "+ typeof doc.ontouchstart);
+  log("touchstart: "+ doc.ontouchstart);
+
+
 
   return {
 
   };
+
+
 }()));
