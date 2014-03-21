@@ -11,8 +11,8 @@ var swipes;
   }
   log.on = true;
 
-  log("typeof touchstart: "+ typeof doc.ontouchstart);
-  log("touchstart: "+ doc.ontouchstart);
+  log("typeof touchstart: "+ typeof this.ontouchstart);
+  log("touchstart: "+ this.ontouchstart);
 
 
 
