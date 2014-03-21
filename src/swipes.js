@@ -1,7 +1,7 @@
 var swipes;
 
 ("undefined" == typeof swipes) && (swipes = (function () {
-  var doc = document;
+  var doc = document, docEl = doc.documentElement;
 
   function log(text) {
     if (!log.on) {return;}
@@ -11,8 +11,9 @@ var swipes;
   }
   log.on = true;
 
-  log("typeof touchstart: "+ typeof this.ontouchstart);
-  log("touchstart: "+ this.ontouchstart);
+
+  log("typeof touchstart: "+ typeof docEl.ontouchstart);
+  log("touchstart: "+ docEl.ontouchstart);
 
 
 
